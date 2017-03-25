@@ -9,37 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'Tour of Heroes';
-        // hero = 'Windstorm';
-        this.heroes = HEROES;
+var hero_1 = require('./hero');
+var HeroDetailComponent = (function () {
+    function HeroDetailComponent() {
     }
-    AppComponent.prototype.onSelect = function (hero) {
-        this.selectedHero = hero;
-    };
-    AppComponent = __decorate([
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', hero_1.Hero)
+    ], HeroDetailComponent.prototype, "hero", void 0);
+    HeroDetailComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'my-app',
-            templateUrl: './app.component.html',
-            styleUrls: ['./app.component.css']
+            selector: 'hero-detail',
+            templateUrl: './hero-detail.component.html',
+            styleUrls: ['./hero-detail.component.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], HeroDetailComponent);
+    return HeroDetailComponent;
 }());
-exports.AppComponent = AppComponent;
-var HEROES = [
-    { id: 11, name: "Mr. Nice" },
-    { id: 12, name: "Mr. Maity" },
-    { id: 13, name: "Narco" },
-    { id: 14, name: "Bombasto" },
-    { id: 15, name: "Celeritas" },
-    { id: 16, name: "Superman" },
-    { id: 17, name: "Batman" },
-    { id: 18, name: "Dynama" },
-    { id: 19, name: "Dr IQ" },
-    { id: 20, name: "This Man" }
-];
-//# sourceMappingURL=app.component.js.map
+exports.HeroDetailComponent = HeroDetailComponent;
+//# sourceMappingURL=hero-detail.component.js.map

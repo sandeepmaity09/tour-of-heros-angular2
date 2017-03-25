@@ -25,7 +25,17 @@
     </li>
 </ul>
 
-<div *ngIf="selectedHero">
+<!-- the below line is Putting square 
+brackets around the hero property, 
+to the left of the equal sign (=), 
+makes it the target of a property 
+binding expression. -->
+
+<hero-detail [hero]="selectedHero"></hero-detail>
+
+<!-- The below lines moves to hero-details.component.html-->
+
+<!--<div *ngIf="selectedHero">
 <h2>{{selectedHero.name}} Details!</h2>
 <div><label>id: </label>{{selectedHero.id}}</div>
 <div><label>name: </label>{{selectedHero.name}}</div>
@@ -33,4 +43,4 @@
     <label>name: </label>
     <input [(ngModel)]="selectedHero.name" placeholder="name" />
 </div>
-</div>
+</div>-->
